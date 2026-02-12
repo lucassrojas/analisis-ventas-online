@@ -45,7 +45,7 @@ alter table file2 drop column id
 
 select count(*) from file2 --Sin duplicados y sin nulls, se tienen 48107 registros
 
--- Verifico posibles valores extraños
+-- Verifico posibles nombres extraños o con errores
 
 select Gender, count(*) from file2 group by Gender
 
@@ -53,7 +53,7 @@ select Location, count(*) from file2 group by Location
 
 select Product_Category, count(*) from file2 group by Product_Category
 
--- No se presentan nombres raros
+-- No se presentan nombres extraños
 
 
 
@@ -98,12 +98,12 @@ select year(Transaction_Date), count(*) from file2 group by year(transaction_dat
 select datename(month,Transaction_Date) as mes, sum(avg_price * quantity) as revenue_mes from file2 group by month(Transaction_Date),datename(month,Transaction_Date) order by month(Transaction_Date) asc
 
 
--- Top 4 Categorías por Ventas
+-- Top 5 Categorías por Ventas
 
 with ventas as (select Product_Category as categoria, count(*) as ventas_categoria from file2 group by Product_Category) select top 5 *, rank() over(order by ventas_categoria desc) ranking from ventas
 
 
--- Top 4 Clientes por Revenue
+-- Top 5 Clientes por Revenue
 
 with revenues as (select CustomerID, sum(Avg_Price * Quantity) as revenue_cliente from file2 group by CustomerID) select top 5 *, rank() over(order by revenue_cliente desc) ranking from revenues
 
@@ -113,4 +113,5 @@ with revenues as (select CustomerID, sum(Avg_Price * Quantity) as revenue_client
 select Location as ciudad, count(*) as ventas_ciudad from file2 group by Location
 
 with ventas as (select Location as ciudad, COUNT(*) as ventas_ciudad from file2 group by Location) select ciudad, ventas_ciudad * 100.0 / (select count(*) as ventas_totales from file2) as porcentaje from ventas
+
 
