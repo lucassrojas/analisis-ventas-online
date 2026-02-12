@@ -16,15 +16,15 @@ Análisis de los datos crudos de las ventas de un Shopping Online durante el añ
 
 ## Insights
 
-- El Revenue Total fue de $4.466.500, manteniendo un crecimiento progresivo durante la mayor parte del año.
+- **El Revenue Total fue de $4.466.500**, manteniendo un crecimiento progresivo durante la mayor parte del año.
 
-- Se observa el pico máximo entre noviembre, diciembre y enero. Seguido, se observa una caída relevante en febrero, de aproximadamente $500.000 a $300.000.
+- **Se observa el pico máximo entre noviembre, diciembre y enero**, seguido de **una caída relevante en febrero del 40%**, pasando de aproximadamente $500.000 a $300.000.
 
-- La cantidad de unidades vendidas es muy elevada respecto a la cantidad de clientes únicos, lo que sugiere pedidos de múltiples unidades.
+- **La cantidad de unidades vendidas es muy elevada respecto a la cantidad de clientes únicos**, lo que sugiere pedidos de múltiples unidades.
 
-- Chicago y California generan el 65.2% de las ventas totales, y New York, con una participación relevante pero menor, presenta claras oportunidades de crecimiento.
+- **Chicago y California generan el 65.2% de las ventas totales**, y New York, con una participación relevante pero menor, presenta claras oportunidades de crecimiento.
 
-- Las líneas de producto más vendidas fueron Apparel (Ropa) y Nest-USA, las dos superando por más del doble en volumen de ventas al resto.
+- **Las líneas de producto más vendidas fueron Apparel (Ropa) y Nest-USA**, las dos superando por más del doble en volumen de ventas al resto.
 
 <hr style="height: 3px; background-color: #d2d7db; border: none;">
 
@@ -36,7 +36,7 @@ Análisis de los datos crudos de las ventas de un Shopping Online durante el añ
 
 - Los clientes de IDs 12748 y 15311 tuvieron un gran impacto en el revenue total. Se recomienda priorizar la fidelidad de estos clientes a largo plazo.
 
-- Garantizar la disponibilidad constante de los productos Apparel y Nest-USA, y utilizar su alta demanda para impulsar categorías con menor volumen de ventas.
+- Garantizar la disponibilidad constante de los productos Apparel y Nest-USA, y utilizar su alta demanda para impulsar categorías con menor volumen de ventas mediante estrategias como combos de productos.
 
 <hr style="height: 3px; background-color: #d2d7db; border: none;">
 
@@ -49,3 +49,4 @@ CustomerID, Location (ciudades), Transaction_ID, Transaction_Date, Product_Categ
 La variable Gender (género) se mantuvo en el modelo, pero fue excluida de los reportes finales para priorizar métricas con mayor impacto en la toma de decisiones.
 
 **Procedimiento:** El estudio se realizó mediante la ejecucion de consultas SQL para extraer y verificar métricas de rendimiento, las cuales fueron recreadas con medidas DAX en Power BI, herramienta donde se llevó a cabo el modelado final de datos y el diseño de las visualizaciones.
+
