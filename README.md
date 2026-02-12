@@ -46,9 +46,10 @@ Análisis de los datos crudos de las ventas de un Shopping Online durante el añ
 
 CustomerID, Location (ciudades), Transaction_ID, Transaction_Date, Product_Category, Quantity y Avg_Price.
 
-La variable Gender (género) se mantuvo en el modelo, pero fue excluida de los reportes finales para priorizar métricas con mayor impacto en el análisis final.
+La variable Gender (género) se mantuvo en el modelo, pero fue excluida de los reportes finales para priorizar medidas con mayor impacto en el análisis final.
 
 **Procedimiento:** El estudio se realizó mediante la ejecucion de consultas SQL para extraer y verificar métricas de rendimiento, las cuales fueron recreadas con medidas DAX en Power BI, herramienta donde se llevó a cabo el modelado final de datos y el diseño de las visualizaciones.
+
 
 
 
