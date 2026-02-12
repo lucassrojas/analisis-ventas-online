@@ -18,7 +18,7 @@ Análisis de los datos crudos de las ventas de un Shopping Online durante el añ
 
 - **El Revenue Total fue de $4.466.500**, manteniendo un crecimiento progresivo durante la mayor parte del año.
 
-- **Se observa el pico máximo entre noviembre, diciembre y enero**, seguido de **una caída relevante en febrero del 40%**, pasando de aproximadamente $500.000 a $300.000.
+- **Se observa el pico máximo entre noviembre, diciembre**, con un crecimiento aproximado del 67% respecto al mínimo registrado en febrero, pasando de aproximadamente $300.000 a $500.000.
 
 - **La cantidad de unidades vendidas es muy elevada respecto a la cantidad de clientes únicos**, lo que sugiere pedidos de múltiples unidades.
 
@@ -32,7 +32,7 @@ Análisis de los datos crudos de las ventas de un Shopping Online durante el añ
 
 - Se recomienda realizar campañas focalizadas en New York, ya que representa el 21.1% del revenue total y presenta un alto potencial de crecimiento.
 
-- Implementar promociones agresivas en febrero, con el fin de moderar el descenso en las ventas respecto a fin de año.
+- Implementar promociones agresivas en febrero del próximo año, con el fin de reducir la caída de ventas posterior a los picos máximos de fin de año.
 
 - Los clientes de IDs 12748 y 15311 tuvieron un gran impacto en el revenue total. Se recomienda priorizar la fidelidad de estos clientes a largo plazo.
 
@@ -49,5 +49,6 @@ CustomerID, Location (ciudades), Transaction_ID, Transaction_Date, Product_Categ
 La variable Gender (género) se mantuvo en el modelo, pero fue excluida de los reportes finales para priorizar métricas con mayor impacto en la toma de decisiones.
 
 **Procedimiento:** El estudio se realizó mediante la ejecucion de consultas SQL para extraer y verificar métricas de rendimiento, las cuales fueron recreadas con medidas DAX en Power BI, herramienta donde se llevó a cabo el modelado final de datos y el diseño de las visualizaciones.
+
 
 
