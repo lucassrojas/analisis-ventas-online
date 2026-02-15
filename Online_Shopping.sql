@@ -63,16 +63,16 @@ select Product_Category, count(*) from file2 group by Product_Category
 
 -- Consultas de Métricas y KPIs
 
--- Revenue total
+-- Ingresos Totales
 
-select sum(avg_price * quantity) as revenue from file2
+select sum(avg_price * quantity) as ingresos from file2
 
 
 -- Ticket Promedio
 
 select Transaction_ID, count(*) from file2 group by Transaction_ID  -- Existen transacciones repetidas. Una sola transaccion puede ser de varios productos.
 
-select sum(avg_price * Quantity) / count(distinct(Transaction_ID)) as ticket_promedio from file2 -- Revenue Total / Total de Ventas Únicas
+select sum(avg_price * Quantity) / count(distinct(Transaction_ID)) as ticket_promedio from file2 -- Ingresos Totales / Total de Ventas Únicas
 
 
 
@@ -87,7 +87,7 @@ select count(distinct CustomerID) as clientes_totales from file2
 Select sum(quantity) as total_unidades_vendidas from file2
 
 
--- Revenue por mes:
+-- Ingresos por mes:
 
 -- Reviso la cantidad de años registrados
 
@@ -95,7 +95,7 @@ select year(Transaction_Date), count(*) from file2 group by year(transaction_dat
 
 -- No hay necesidad de separar por años ya que hay uno solo
 
-select datename(month,Transaction_Date) as mes, sum(avg_price * quantity) as revenue_mes from file2 group by month(Transaction_Date),datename(month,Transaction_Date) order by month(Transaction_Date) asc
+select datename(month,Transaction_Date) as mes, sum(avg_price * quantity) as ingresos_mensuales from file2 group by month(Transaction_Date),datename(month,Transaction_Date) order by month(Transaction_Date) asc
 
 
 -- Top 5 Categorías por Ventas
@@ -103,9 +103,9 @@ select datename(month,Transaction_Date) as mes, sum(avg_price * quantity) as rev
 with ventas as (select Product_Category as categoria, count(*) as ventas_categoria from file2 group by Product_Category) select top 5 *, rank() over(order by ventas_categoria desc) ranking from ventas
 
 
--- Top 5 Clientes por Revenue
+-- Top 10 Clientes por Revenue
 
-with revenues as (select CustomerID, sum(Avg_Price * Quantity) as revenue_cliente from file2 group by CustomerID) select top 5 *, rank() over(order by revenue_cliente desc) ranking from revenues
+with ingresos as (select CustomerID, sum(Avg_Price * Quantity) as ingresos_cliente from file2 group by CustomerID) select top 10 *, rank() over(order by ingresos_cliente desc) ranking from ingresos
 
 
 -- Distribución de Ventas por Ciudad
@@ -113,5 +113,6 @@ with revenues as (select CustomerID, sum(Avg_Price * Quantity) as revenue_client
 select Location as ciudad, count(*) as ventas_ciudad from file2 group by Location
 
 with ventas as (select Location as ciudad, COUNT(*) as ventas_ciudad from file2 group by Location) select ciudad, ventas_ciudad * 100.0 / (select count(*) as ventas_totales from file2) as porcentaje from ventas
+
 
 
