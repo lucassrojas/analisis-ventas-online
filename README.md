@@ -14,9 +14,9 @@ Análisis de los datos crudos de las ventas de un Shopping Online durante el añ
 
 <hr style="height: 3px; background-color: #d2d7db; border: none;">
 
-## Insights
+## Hallazgos
 
-- **El Revenue Total fue de $4.466.500**, manteniendo un crecimiento progresivo durante la mayor parte del año.
+- **Los Ingresos Totales fueron de $4.466.500**, manteniendo un crecimiento progresivo durante la mayor parte del año.
 
 - **Se observa el pico máximo entre noviembre, diciembre**, con un crecimiento aproximado del 67% respecto al mínimo registrado en febrero, pasando de aproximadamente $300.000 a $500.000.
 
@@ -30,11 +30,11 @@ Análisis de los datos crudos de las ventas de un Shopping Online durante el añ
 
 ## Recomendaciones Estratégicas
 
-- Se recomienda realizar campañas focalizadas en New York, ya que representa el 21.1% del revenue total y presenta un alto potencial de crecimiento.
+- Se recomienda realizar campañas focalizadas en New York, ya que representa el 21.1% de los ingresos totales y presenta un alto potencial de crecimiento.
 
 - Implementar promociones agresivas en febrero del próximo año, con el fin de reducir la caída de ventas posterior a los picos máximos de fin de año.
 
-- Los clientes de IDs 12748 y 15311 tuvieron un gran impacto en el revenue total. Se recomienda priorizar la fidelidad de estos clientes a largo plazo.
+- Los clientes de IDs 12748 y 15311 tuvieron un gran impacto en los ingresos totales. Se recomienda priorizar la fidelidad de estos clientes a largo plazo.
 
 - Garantizar la disponibilidad constante de los productos Apparel y Nest-USA, y utilizar su alta demanda para impulsar categorías con menor volumen de ventas mediante la venta de productos en combo.
 
@@ -49,6 +49,7 @@ CustomerID, Location (ciudades), Transaction_ID, Transaction_Date, Product_Categ
 La variable Gender (género) se mantuvo en el modelo, pero fue excluida de los reportes finales para priorizar medidas con mayor impacto en el análisis final.
 
 **Procedimiento:** El estudio se realizó mediante la ejecucion de consultas SQL para extraer y verificar métricas de rendimiento, las cuales fueron recreadas con medidas DAX en Power BI, herramienta donde se llevó a cabo el modelado final de datos y el diseño de las visualizaciones.
+
 
 
 
