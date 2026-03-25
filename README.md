@@ -1,10 +1,10 @@
-## Análisis de Online Shopping 2019
+## Análisis de Ventas Online
 
 **Dataset:** Online Shopping Dataset, publicado en Kaggle por Jackson Divakar R.
 
 **Link:** https://www.kaggle.com/datasets/jacksondivakarr/online-shopping-dataset.
 
-Análisis de los datos de ventas de un Shopping Online durante el año 2019, con el objetivo de identificar tendencias importantes del negocio y ayudar en la toma de decisiones.
+Análisis de los datos de ventas de un Shopping Online durante el año 2019, con el objetivo de identificar y analizar tendencias importantes del negocio.
 
 **Herramientas Utilizadas:** SQL y Power BI.
 
@@ -16,13 +16,13 @@ Análisis de los datos de ventas de un Shopping Online durante el año 2019, con
 
 ## Hallazgos
 
-- **Los Ingresos Totales fueron de $4.466.500**, manteniendo un crecimiento progresivo durante la mayor parte del año.
+- **Los Ingresos Totales fueron de $4.466.500**, manteniendo un crecimiento constante durante la mayor parte del año.
 
-- **Se observa el pico máximo entre noviembre, diciembre**, con un crecimiento aproximado del 67% respecto al mínimo registrado en febrero, pasando de aproximadamente $300.000 a $500.000.
-
+- **Se observa el pico máximo entre noviembre y diciembre**, con un crecimiento aproximado del 67% respecto al mínimo registrado en febrero.
+  
 - **La cantidad de unidades vendidas es muy elevada respecto a la cantidad de clientes únicos**, lo que sugiere pedidos de múltiples unidades.
 
-- **Chicago y California generan el 65.2% de las ventas totales**, y New York, con una participación relevante pero menor, presenta claras oportunidades de crecimiento.
+- Chicago y California generan el 65.2% de las ventas totales, y New York, con una participación relevante pero menor, presenta claras oportunidades de crecimiento.
 
 - **Las líneas de producto más vendidas fueron Apparel (Ropa) y Nest-USA**, las dos superando por más del doble en volumen de ventas al resto.
 
